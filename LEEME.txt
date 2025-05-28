@@ -1,0 +1,10 @@
+Puede ejecutarse desplegado en Tomcat o Standalone
+
+Para ejecutarse sobre tomcat:
+	Desactivar perfil standAlone em pom.xml, haciendo false activeByDefault
+	
+Para ejecutarse standalone:
+	Activar perfil standAlone em pom.xml, haciendo true activeByDefault
+	(Se requiere del motor de Jsps, Jasper, para que se compilen los jsps
+	 y es imprescindible que NO se registre como provided -el motor no 
+	 es empacado por defecto por Spring Boot)
