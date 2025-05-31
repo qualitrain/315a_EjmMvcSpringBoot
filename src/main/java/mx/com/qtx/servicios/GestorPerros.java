@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -12,6 +13,7 @@ import mx.com.qtx.persistencia.RepositorioMemoria;
 
 @Service
 public class GestorPerros {
+	@Autowired
     private IRepositorioPerros repositorio;
 
 	public GestorPerros() {
@@ -37,6 +39,7 @@ public class GestorPerros {
 		}
 		return errores;
 	}
+	
 	public List<ErrorValidacion> validarPerroInsercion(Map<String,String> mapPerro){
 		List<ErrorValidacion> errores = new ArrayList<>();
 		String nombre = mapPerro.get("nombre");
@@ -70,6 +73,7 @@ public class GestorPerros {
 		}
 		return errores;
 	}
+	
 	public Perro crearPerroIns(Map<String, String> mapPerro) {
 		Perro perro = new Perro();
 		perro.setEdad(Integer.parseInt(mapPerro.get("edad")));
@@ -77,6 +81,7 @@ public class GestorPerros {
 		perro.setRaza(mapPerro.get("raza"));
 		return perro;
 	}
+	
 	private boolean esNumero(String strEdad) {
 		try {
 			Integer.parseInt(strEdad);
@@ -111,6 +116,7 @@ public class GestorPerros {
 		}
 		perro.setId(errores.size() * -1);
 	}
+	
 	public List<Perro> getPerrosTodos(){
 		return this.repositorio.getPerros();
 	}

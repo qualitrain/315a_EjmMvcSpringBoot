@@ -30,9 +30,6 @@ public class FiltroEncode extends HttpFilter implements Filter {
 		bitacora.info("FiltroEncode instanciado");
     }
 
-	public void destroy() {
-	}
-
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		bitacora.info("req.contentType:"+ request.getContentType());
 		String contentTypeReq = request.getContentType();
@@ -42,8 +39,4 @@ public class FiltroEncode extends HttpFilter implements Filter {
 		chain.doFilter(request, response);
 		bitacora.info("resp.contentType:"+ response.getContentType());
 	}
-
-	public void init(FilterConfig fConfig) throws ServletException {
-	}
-
 }

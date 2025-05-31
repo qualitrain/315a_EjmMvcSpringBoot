@@ -4,9 +4,12 @@ import java.util.Hashtable;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.stereotype.Repository;
+
 import mx.com.qtx.entidades.Perro;
 import mx.com.qtx.servicios.IRepositorioPerros;
 
+@Repository
 public class RepositorioMemoria implements IRepositorioPerros {
 	private Map<Integer,Perro> perros;
 	private Map<String, Perro> perrosXnombre;

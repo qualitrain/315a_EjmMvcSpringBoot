@@ -37,7 +37,8 @@ public class EscuchaContexto implements ServletContextListener{
         Properties prop = new Properties();
         try (InputStream recurso = loader.getResourceAsStream("application.properties")){
             prop.load(recurso);
-        } catch (Exception e) {
+        } 
+        catch (Exception e) {
             bitacora.error("No fue posible leer archivo de propiedades");
             bitacora.error(e.getClass().getName() + ":" + e.getMessage());
             return "error";

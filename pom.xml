@@ -13,7 +13,7 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<name>315a_EjmMvcSpringBoot</name>
-	<description>Ejm Sprin MVC minimo</description>
+	<description>Ejm Spring MVC minimo</description>
 	<url/>
 	<licenses>
 		<license/>
