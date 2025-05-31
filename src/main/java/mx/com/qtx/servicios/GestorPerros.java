@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 
 import jakarta.servlet.http.HttpServletRequest;
 import mx.com.qtx.entidades.Perro;
-import mx.com.qtx.persistencia.RepositorioMemoria;
 
 @Service
 public class GestorPerros {
@@ -18,7 +17,6 @@ public class GestorPerros {
 
 	public GestorPerros() {
 		super();
-		this.repositorio = new RepositorioMemoria();
 	}
 	
 	public List<ErrorValidacion> validarPerroInsercion(Perro perro){

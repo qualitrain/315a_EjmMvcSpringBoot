@@ -5,8 +5,8 @@ import java.util.List;
 import mx.com.qtx.entidades.Perro;
 
 public interface IRepositorioPerros {
-	public Perro getPerroXID(int id);
-	public int insertarPerro(Perro perro);
-	public List<Perro> getPerros();
-	public Perro getPerroXNombre(String nombre);
+	Perro getPerroXID(int id);
+	int insertarPerro(Perro perro);
+	List<Perro> getPerros();
+	Perro getPerroXNombre(String nombre);
 }
